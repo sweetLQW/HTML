@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3动画制作</title>
+	<style type="text/css">
+		@keyframes wave1{
+			50%{
+				transform:translate(-100px);
+			}
+		}
+		@keyframes wave2{
+			50%{
+				transform:translate(-120px);
+			}
+		}
+		@keyframes wave3{
+			50%{
+				transform:translate(-90px);
+			}
+		}
+		@keyframes boat{
+			50%{
+				transform:rotate(10deg);
+			}
+		}
+		@keyframes fash{
+			25%{
+				transform:translate(300px,-250px) rotate(-35deg);
+			}
+			50%{
+				transform:translate(600px,100px) rotate(30deg);
+			}
+			75%{
+				transform:translate(900px,-250px) rotate(-35deg);
+			}
+			100%{
+				transform:translate(1200px,100px) rotate(30deg);
+			}
+		}
+		*{
+			margin: 0px;
+			padding:0px;
+		}
+		html,body{
+			height:100%;
+			overflow: hidden;
+		}
+		.sea{
+			width: 100%;
+			height:100%;
+		}
+		.wave1,.wave2,.wave3{
+			width: 140%;
+			height:110px;
+		}
+		.wave1{
+			background-image: url(images/wave3.png);
+			background-repeat: repeat-x;
+			animation:wave1 7s linear infinite;
+			position: absolute;
+			bottom:0px;
+			z-index: 20;
+		}
+		.wave2{
+			background-image: url(images/wave2.png);
+			animation:wave2 6s linear infinite;
+			position: absolute;
+			bottom:50px;
+			z-index: 10;
+		}
+		.wave3{
+			background-image: url(images/wave1.png);
+			animation:wave3 5s linear infinite;
+			position: absolute;
+			bottom:100px;
+			z-index: 0;
+		}
+		.boat{
+			animation:boat 7s linear infinite;
+			margin:0 auto;
+			position: absolute;
+			left:300px;
+			bottom:80px;
+			z-index:5; 
+		}
+		.fash{
+			animation:fash 5s linear infinite;
+			position: absolute;
+			bottom:90px;
+			z-index:6; 
+		}
+	</style>
+</head>
+<body>
+		
+	<div class="sea">
+		<img class="fash" src="images/yu.png" alt="">
+		<img class="boat" src="images/chuan.png" alt="">
+		<div class="wave1">
+		</div>
+		<div class="wave2">
+		</div>
+		<div class="wave3">
+		</div>
+		<!-- <img class="wave1" src="images/wave1.png" alt="">
+		<img class="wave2" src="images/wave2.png" alt="">
+		<img class="wave3" src="images/wave3.png" alt=""> -->
+	</div>
+</body>
+</html>

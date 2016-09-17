@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>photo wall</title>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		html,body{
+			background-color: gray;
+		}
+		.photo1,.photo3,.photo8,.photo9,.photo10,.photo11{
+			width: 200px;
+			height: 270px;
+			border: 5px solid white;
+		}
+		.photo2,.photo4,.photo5,.photo6,.photo7,.photo12{
+			width: 300px;
+			height: 200px; 
+			border: 5px solid white;
+		}
+		.photo1{
+			position: absolute;
+			top:100px;
+			left:200px;
+			z-index: 1;
+			transform:rotate(30deg);
+		}
+		.photo2{
+			position: absolute;
+			top:100px;
+			left:300px;
+			z-index: 3;
+			transform:rotate(-20deg);
+		}
+		.photo5{
+			position: absolute;
+			top:100px;
+			left:400px;
+			z-index: 5;
+			transform:rotate(10deg);
+		}
+		.photo3{
+			position: absolute;
+			top:100px;
+			left:600px;
+			z-index: 1;
+			transform:rotate(-30deg);
+		}
+		.photo4{
+			position: absolute;
+			top:100px;
+			left:750px;
+			z-index: 1;
+			transform:rotate(-30deg);
+		}
+		.photo6{
+			position: absolute;
+			top:130px;
+			left:900px;
+			z-index: 1;
+			transform:rotate(30deg);
+		}
+		.photo7{
+			position: absolute;
+			top:450px;
+			left:200px;
+			z-index: 1;
+			transform:rotate(-20deg);
+		}
+		.photo8{
+			position: absolute;
+			top:450px;
+			left:400px;
+			z-index: 1;
+			transform:rotate(-20deg);
+		}
+		.photo9{
+			position: absolute;
+			top:450px;
+			left:650px;
+			z-index: 1;
+			transform:rotate(20deg);
+		}
+		.photo10{
+			position: absolute;
+			top:450px;
+			right:200px;
+			z-index: 1;
+			transform:rotate(45deg);
+		}
+		.photo11{
+			position: absolute;
+			top:450px;
+			left:600px;
+			z-index: 1;
+			transform:rotate(20deg);
+		}
+		.photo12{
+			position: absolute;
+			top:500px;
+			left:650px;
+			z-index: 1;
+			transform:rotate(-20deg);
+		}
+		.style{
+			transform:rotate(0deg) scale(1.5);
+			z-index: 999;
+		}
+	</style>
+</head>
+<body>
+	<img class="photo1" src="images/1.jpg" alt="">
+	<img class="photo2" src="images/2.jpg" alt="">
+	<img class="photo3" src="images/3.jpg" alt="">
+	<img class="photo4" src="images/4.jpg" alt="">
+	<img class="photo5" src="images/5.jpg" alt="">
+	<img class="photo6" src="images/6.jpg" alt="">
+	<img class="photo7" src="images/7.jpg" alt="">
+	<img class="photo8" src="images/8.jpeg" alt="">
+	<img class="photo9" src="images/9.jpeg" alt="">
+	<img class="photo10" src="images/10.jpg" alt="">
+	<img class="photo11" src="images/11.jpg" alt="">
+	<img class="photo12" src="images/12.jpg" alt="">
+	<script src="script/jquery.js"></script>
+	<script>
+		$("img").hover(function(){
+			$(this).toggleClass("style");
+		})
+	</script>
+</body>
+</html>

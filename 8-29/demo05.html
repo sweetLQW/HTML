@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html5音频</title>
+</head>
+<body>
+	<audio id="music" src="audio/1.mp3" controls></audio>
+	<!-- <button id="play">播放</button>
+	<button id="pause">暂停</button> -->
+	<button id="control">开始</button>
+	<script>
+		var music = document.getElementById("music");
+		var controlBtn = document.getElementById("control");
+		controlBtn.onclick = function(){
+			if(music.paused){
+				music.play();
+				controlBtn.innerHTML = "暂停"
+			}else{
+				music.pause();
+				controlBtn.innerHTML = "播放"
+			}
+			
+		}
+		// var playBtn = document.getElementById("play");
+		// var pauseBtn = document.getElementById("pause");
+		// playBtn.onclick = function(){
+		// 	music.play();
+		// }
+		// pauseBtn.onclick = function(){
+		// 	music.pause();
+		// }
+	</script>
+</body>
+</html>

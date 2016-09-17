@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>老师版百度样式</title>
+	<style type="text/css">
+		#list li{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			list-style: none;
+			position: relative;
+			overflow: hidden;
+		}
+		#list li .showbox{
+			width: 100px;
+			height: 100px;
+			background-color: purple;
+			position: absolute;
+			top:0px;
+			left:0px;
+			transform-origin:left bottom;
+			transition:transform 0.2s linear;
+			transform:rotate(90deg);
+			z-index: 999;
+		}
+		#list li .move{
+			transform:rotate(0deg);
+		}
+	</style>
+</head>
+<body>
+	<ul id="list">
+		<li>
+			<a href="">一</a>
+			<div class="showbox">1</div>
+		</li>
+		<li>
+			<a href="">二</a>
+			<div class="showbox">2</div>
+		</li>
+		<li>
+			<a href="">三</a>
+			<div class="showbox">3</div>
+		</li>
+	</ul>
+	<script src="script/jquery.js"></script>
+	<script>
+		$("#list li").hover(function(){
+			$(this).find(".showbox").toggleClass("move");
+		})
+	</script>
+</body>
+</html>

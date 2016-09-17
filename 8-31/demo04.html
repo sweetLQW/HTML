@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3侧拉框</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding:0px;
+		}
+		html,body{
+			height: 100%;
+		}
+		.btn{
+			width: 70px;
+			height: 30px;
+		}
+		.menu{
+			background-color: red;
+			transform:translate(-200px);
+			width: 200px;
+			height: 100%;
+			position: absolute;
+			top:0px;
+			transition:transform 0.5s linear;
+		}
+		.clo{
+			    margin-left: 165px;
+		}
+		.show{
+			transform:translate(0px);
+		}
+		#list li{
+			list-style: none;
+			width: 100px;
+			height: 40px;
+			margin: 0 auto;
+			line-height: 40px;
+		}
+	</style>
+</head>
+<body>
+	<button class="btn">侧边栏</button>
+	<div class="menu">
+		<button class="clo">关闭</button>
+		<ul id="list">
+			<li><a href="http://baidu.com">百度</a></li>
+			<li><a href="http://163.com">搜狐</a></li>
+			<li><a href="">谷歌</a></li>
+			<li><a href="">优酷</a></li>
+			<li><a href="">芒果tv</a></li>
+		</ul>
+	</div>
+	<script src="script/jquery.js"></script>
+	<script>
+		$(".btn").click(function(){
+			$(".menu").removeClass("close");
+			$(".menu").addClass("show");
+		})
+		$(".clo").click(function(){
+			$(".menu").removeClass("show");
+		})
+	</script>
+</body>
+</html>
