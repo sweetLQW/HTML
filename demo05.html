@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
+        <!-- 方法一 -->
+        <!-- <meta name="viewport" content="width=device-width,initial-scale=0.5,minimum-scale=0.5,user-scalable=no"> -->
+        <style>
+            * {
+                margin: 0;
+            }
+            .line {
+                border-bottom: 1px solid red;
+                /* 方法二 */
+                transform: scale(0.5);
+                width: 200%;
+                margin-left: -50%;
+            }
+        </style>
+    </head>
+    <body>
+        <p>我是测试移动端view页面的 画一个0.5px的线</p>
+        <div class="line"></div>
+    </body>
+</html>
